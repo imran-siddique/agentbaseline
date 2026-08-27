@@ -1,0 +1,71 @@
+framework: EU Artificial Intelligence Act
+version: "Regulation (EU) 2024/1689"
+scope: >-
+  This crosswalk maps the Regulation's requirements for high-risk AI systems.
+  It is not a claim that every Agent Baseline control is required for every AI
+  system or actor.
+source: https://eur-lex.europa.eu/eli/reg/2024/1689/oj
+mappings:
+  - control: DIS-01
+    entries: [Article 17(1)(j), Annex IV(1)]
+    note: partial — the Act requires accountable records and technical documentation, but does not require one authoritative agent registry
+  - control: DIS-02
+    entries: [Article 9, Article 17(1)(a)]
+    note: partial — risk management and assigned responsibilities support the control, but the Act does not prescribe Agent Baseline's ownership record
+  - control: DIS-03
+    entries: [Article 18, Article 19, Article 26(6)]
+    note: partial — the Act requires documentation and log retention, but not the full status and decision history in this control
+  - control: DIS-05
+    entries: [Article 11, Annex IV(2)]
+    note: partial — technical documentation describes system elements and development, while this control also requires the effective runtime composition
+  - control: DIS-07
+    entries: [Article 17(1)(j)]
+    note: gap — the quality system must support accountability and record-keeping, but automated discovery and reconciliation are not required
+  - control: CON-03
+    entries: [Article 15(5)]
+    note: partial — resilience and cybersecurity include measures against attempts to alter use, outputs, or performance, but the Act does not prescribe isolation
+  - control: AUT-01
+    entries: [Article 12(2), Article 14]
+    note: partial — traceability and human oversight support attribution, but distinct machine identity is not prescribed
+  - control: AUT-05
+    entries: [Article 14]
+    note: partial — human oversight is required, but independent approval for each high-impact action is not
+  - control: AUT-06
+    entries: [Article 14(4)(e), Article 15(4)]
+    note: partial — operators must be able to stop or interrupt and systems must resist faults, but fail-closed authorization is not prescribed
+  - control: OBS-01
+    entries: [Article 12(1), Article 12(2)]
+    note: partial — automatic event logging and traceability are required; the Act does not list every identity, policy, tool, and outcome field in this control
+  - control: OBS-02
+    entries: [Article 12(2)]
+    note: partial — the Act requires appropriate traceability, but does not require stable end-to-end identifiers across all components
+  - control: OBS-03
+    entries: [Article 12(2), Article 26(5), Article 72]
+    note: strong — logging must support risk detection, deployer monitoring, and post-market monitoring
+  - control: OBS-04
+    entries: [Article 12(2)(a), Article 14]
+    note: partial — risk-relevant events and effective oversight are required, but unintended-action detection is not named
+  - control: OBS-05
+    entries: [Article 12(2)]
+    note: gap — traceability is required, but the Act does not require one evidence chain from business intent through target-system result
+  - control: OBS-06
+    entries: [Article 12, Article 19, Article 26(6)]
+    note: partial — the Act requires logging and minimum retention where logs are under provider or deployer control; it does not require independent verification or proof that omitted events would be detected
+  - control: VAL-01
+    entries: [Article 9(6), Article 9(7), Article 15]
+    note: strong — high-risk systems must be tested against defined metrics and thresholds and throughout development as appropriate
+  - control: VAL-04
+    entries: [Article 14, Article 26(5)]
+    note: partial — oversight and monitoring of outputs are required, but validation of every material business outcome is not
+  - control: RES-01
+    entries: [Article 14(4)(e), Article 20]
+    note: partial — systems must support stopping or interruption and providers must take corrective action, but credential and delegation revocation are not prescribed
+  - control: RES-02
+    entries: [Article 20]
+    note: partial — corrective action can include withdrawal, disabling, or recall; component-level quarantine is more specific
+  - control: RES-03
+    entries: [Article 12, Article 20, Article 73]
+    note: partial — logs and serious-incident duties support investigation, but the control's full impact-scoping method is not prescribed
+  - control: RES-04
+    entries: [Article 14(4)(e), Article 15(4)]
+    note: partial — safe stopping and resilience are supported, but a non-agent fallback is not required
